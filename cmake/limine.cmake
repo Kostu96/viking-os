@@ -41,3 +41,20 @@ if(NOT EXISTS "${LIMINE_DIR}")
 endif()
 
 message(STATUS "Limine: ${LIMINE_DIR}")
+
+ set(LIMINE_EXECUTABLE "${LIMINE_DIR}/limine")
+
+if(NOT EXISTS "${LIMINE_EXECUTABLE}")
+    message(STATUS "Building limine host tool...")
+    execute_process(
+        COMMAND make
+        WORKING_DIRECTORY "${LIMINE_DIR}"
+        RESULT_VARIABLE LIMINE_BUILD_RESULT
+    )
+
+    if(NOT LIMINE_BUILD_RESULT EQUAL 0)
+        message(FATAL_ERROR "Failed to build the limine host tool. Make sure 'make' and a C compiler are installed.")
+    endif()
+endif()
+
+message(STATUS "Limine executable: ${LIMINE_EXECUTABLE}")
