@@ -3,6 +3,10 @@ add_executable(kernel
     src/main.cpp
 )
 
+target_include_directories(kernel PRIVATE
+    ${LIMINE_HEADER_INCLUDE_DIR}
+)
+
 set_target_properties(kernel PROPERTIES
     OUTPUT_NAME kernel.elf
 )
