@@ -30,3 +30,5 @@ add_custom_target(iso ALL
     COMMENT "Building bootable ISO with Limine"
     VERBATIM
 )
+
+set(ISO_FILE "${ISO_FILE}" PARENT_SCOPE)

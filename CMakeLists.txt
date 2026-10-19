@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.4)
+cmake_minimum_required(VERSION 4.2)
 
 project(viking-os LANGUAGES CXX ASM)
 
@@ -9,3 +9,5 @@ include(cmake/limine.cmake)
 
 add_subdirectory(kernel)
 add_subdirectory(iso)
+
+include(cmake/run_qemu.cmake)
