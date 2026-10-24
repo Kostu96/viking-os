@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(cmake/limine.cmake)
 
 add_subdirectory(kernel)
+add_subdirectory(libc)
 add_subdirectory(iso)
 
 include(cmake/run_qemu.cmake)
