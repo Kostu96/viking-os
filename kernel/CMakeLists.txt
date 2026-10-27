@@ -1,8 +1,8 @@
 add_executable(kernel
     include/framebuffer.hpp
-    include/halt.hpp
     src/framebuffer.cpp
     src/halt.cpp
+    src/halt.hpp
     src/kernel_main.cpp
     src/limine_requests.cpp
     src/limine_requests.hpp
@@ -15,6 +15,11 @@ target_include_directories(kernel PRIVATE
 
 set_target_properties(kernel PROPERTIES
     OUTPUT_NAME kernel.elf
+)
+
+target_compile_options(kernel PRIVATE
+    -nostdlib
+    -nostdlib++
 )
 
 target_link_options(kernel PRIVATE

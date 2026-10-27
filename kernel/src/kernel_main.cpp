@@ -2,6 +2,8 @@
 #include "halt.hpp"
 #include "limine_requests.hpp"
 
+#include "stdio.h"
+
 #include <stddef.h>
 
 // Scale an 8-bit colour channel value to the size the framebuffer gives the
@@ -54,6 +56,9 @@ extern "C" void kernel_main() {
         fb_pattern(framebuffer);
     }
 
-    // We're done, just hang...
+    putchar('H');
+    putchar('i');
+    putchar('!');
+
     halt();
 }

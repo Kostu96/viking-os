@@ -7,8 +7,8 @@ extern "C" {
 #endif
 
 int putchar(int c) {
-
-    return 0;
+    framebuffer_putchar(c);
+    return c;
 }
 
 #ifdef __cplusplus

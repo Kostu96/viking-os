@@ -42,3 +42,7 @@ void framebuffer_init(const limine_framebuffer& fb) {
     fb_info.blue.mask_size = fb.blue_mask_size;
     fb_info.blue.mask_shift = fb.blue_mask_shift;
 }
+
+void framebuffer_putchar(char c) {
+
+}

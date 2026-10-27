@@ -13,11 +13,11 @@ set(CMAKE_C_LINKER_TYPE LLD)
 set(CMAKE_CXX_LINKER_TYPE LLD)
 
 set(CMAKE_C_FLAGS_INIT
-    "-m64 -ffreestanding -fno-stack-protector -mno-red-zone"
+    "-m64 -nostdlib -ffreestanding -fno-stack-protector -mno-red-zone"
 )
 
 set(CMAKE_CXX_FLAGS_INIT
-    "-m64 -ffreestanding -fno-stack-protector -fno-exceptions -fno-rtti -mno-red-zone"
+    "-m64 -nostdlib -ffreestanding -fno-stack-protector -fno-exceptions -fno-rtti -mno-red-zone"
 )
 
 set(CMAKE_EXE_LINKER_FLAGS_INIT
